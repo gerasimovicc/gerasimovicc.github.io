@@ -1,0 +1,158 @@
+* {
+	font-family: 'Roboto Slab', sans-serif;
+	color: #2e2d2c;
+}
+
+.infotext {
+	font-size: 150%;
+}
+
+.nav-wrapper {
+	background-color: #ffff;
+}
+
+.btn-large {
+	background-color: #1b8a63;
+	border-radius: 4px;
+	transition-duration: 0.2s, 0.2s, 0.2s;
+	transition-timing-function: ease, ease, ease;
+	transition-delay: 0s, 0s, 0s;
+	transition-property: background-color;
+}
+
+.btn-large:hover {
+	background-color: #146649;
+}
+
+.logo {
+	max-width: 100%;
+	max-height: 90%;
+	margin-top: 3px;
+}
+
+.bntu {
+	margin-left: 1%;
+}
+
+.mido {
+	margin-left: 3em;
+}
+
+#start {
+	margin-top: 5%;
+}
+
+.custom-container {
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 90%;
+}
+
+.fa-graduation-cap {
+	color: #1b8a63;
+}
+
+.green-span {
+	color: #1b8a63;
+}
+
+#start .btn-large {
+	background-color: #fff;
+	color: #1b8a63;
+}
+
+#start .btn-large:hover {
+	background-color: #1b8a6321;
+}
+
+.z-depth-0 {
+	transition: all 1s ease-out;
+}
+
+.z-depth-1 {
+	transition: all 1s ease-out;
+}
+
+#advantages {
+	margin-top: 10%;
+}
+
+.hidden {
+	opacity: 0%;
+}
+
+.showing {
+	transition: opacity 2s ease-in-out /*, transform 2s ease-in-out*/;
+	transform: translateY(0);
+}
+
+#admission {
+	background: linear-gradient(#f1f1f1, #fff);
+	margin-top: 5%;
+}
+
+#admission .row {
+	margin-top: 3%;
+}
+
+img {
+	max-width: 100%;
+	border-radius: 20px;
+}
+
+.divider {
+	margin-top: 5%;
+}
+
+.link {
+	color: #1b8a63;
+	text-decoration: underline;
+	transition: background-color 0.2s;
+}
+
+.link:hover {
+	background-color: #1b8a6321;
+}
+
+#footer {
+	margin-top: 2%;
+	background-color: #f1f1f1;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+#footer .link {
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: larger;
+	transition: color 0.2s;
+}
+
+#footer .link:hover {
+	color: #146649;
+	background-color: #f1f1f1;
+}
+
+.fa-phone {
+	color: #2e2d2c;
+}
+
+.fa-envelope {
+	color: #2e2d2c;
+}
+
+@media (max-width: 993px) {
+	.bntu {
+		margin-left: -1.5em;
+	}
+
+	.mido {
+		margin-left: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 601px) {
+	.custom-container {
+		width: 85%;
+	}
+}
