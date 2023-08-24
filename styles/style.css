@@ -149,6 +149,14 @@ img {
 	border-bottom: 2px solid #1b8a63;
 }
 
+#questions {
+	margin-top: 10%;
+}
+
+.collapsible-body {
+	padding: 2%;
+}
+
 @media (max-width: 993px) {
 	.bntu {
 		margin-left: -1.5em;
