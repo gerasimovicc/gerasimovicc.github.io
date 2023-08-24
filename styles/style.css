@@ -141,6 +141,14 @@ img {
 	color: #2e2d2c;
 }
 
+.menu-link {
+	color: #1b8a63;
+}
+
+.active-navbar {
+	border-bottom: 2px solid #1b8a63;
+}
+
 @media (max-width: 993px) {
 	.bntu {
 		margin-left: -1.5em;
