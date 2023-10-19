@@ -112,13 +112,12 @@ img {
 
 .link:hover {
 	background-color: #1b8a6321;
+	cursor: pointer;
 }
 
 #footer {
 	margin-top: 2%;
 	background-color: #f1f1f1;
-	padding-top: 1%;
-	padding-bottom: 1%;
 }
 
 #footer .link {
@@ -133,6 +132,16 @@ img {
 	background-color: #f1f1f1;
 }
 
+#frame {
+	padding-left: 0% !important;
+	height: 400px !important;
+	overflow: hidden;
+}
+
+#no-bottom-margin {
+	margin-bottom: 0% !important;
+}
+
 .fa-phone {
 	color: #2e2d2c;
 }
@@ -141,20 +150,61 @@ img {
 	color: #2e2d2c;
 }
 
-.menu-link {
+.fa-chevron-down {
 	color: #1b8a63;
-}
-
-.active-navbar {
-	border-bottom: 2px solid #1b8a63;
+	transition: color 0.2s;
 }
 
 #questions {
-	margin-top: 10%;
+	margin-top: 2%;
 }
 
+.collapsible {
+	font-size: larger;
+}
+
+.collapsible-header {
+	color: #1b8a63 !important;
+	transition: color 0.2s;
+}
+
+.collapsible-header:hover {
+	color: #146649 !important;
+}
+
+.collapsible-header:hover .fa-chevron-down {
+	color: #146649 !important;
+}
+
+.collapsible-header,
+.collapsible-body,
+.collapsible,
+ul.collapsible > li {
+	border-left: 0 !important;
+	border-right: 0 !important;
+	box-shadow: none !important;
+}
+
+.collapsible-header,
 .collapsible-body {
-	padding: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.collapsible-body p {
+	text-align: justify;
+}
+
+.collapsible-body li {
+	list-style-type: disc !important;
+	text-align: justify;
+}
+
+li[class='active'] .collapsible-header,
+li[class='active'] .fa-chevron-down {
+	border-bottom-color: #146649 !important;
+	border-bottom-width: 2px;
+	color: #146649 !important;
 }
 
 @media (max-width: 993px) {
@@ -164,6 +214,12 @@ img {
 
 	.mido {
 		margin-left: 1.5em;
+	}
+}
+
+@media (max-width: 1086px) {
+	.fa-chevron-down {
+		visibility: hidden;
 	}
 }
 
