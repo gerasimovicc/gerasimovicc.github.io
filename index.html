@@ -2,6 +2,18 @@
 <html ng-app="iide">
 	<head>
 		<title>МИДО</title>
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-WNJKW4Q');
+		</script>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"
@@ -38,7 +50,7 @@
 
 				$scope.contentUrl = {
 					Belarus: 'partial/content-ru.html',
-					default: 'partial/content-en.html',
+					default: 'partial/content-ru-foreign.html',
 				};
 
 				$scope.getContentUrl = function () {
@@ -46,6 +58,8 @@
 					result = $scope.contentUrl[$scope.ip] || $scope.contentUrl['default'];
 					var elems = document.querySelectorAll('.collapsible');
 					var instances = M.Collapsible.init(elems);
+					var elems_select = document.querySelectorAll('select');
+					var instances_select = M.FormSelect.init(elems_select);
 					AOS.refreshHard();
 					return result;
 				};
@@ -57,12 +71,21 @@
 		</script>
 	</head>
 	<body>
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-WNJKW4Q"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
 		<div ng-controller="controller" ng-include="getContentUrl()" ng-view="view"></div>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script>
 			AOS.init({
 				easing: 'ease',
 				delay: 100,
+				once: true,
 			});
 		</script>
 		<script src="scripts/shadow.js"></script>
